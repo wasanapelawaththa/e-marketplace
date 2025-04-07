@@ -1,0 +1,96 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+footer {
+  background-color:#333f;
+  padding: 30px 0;
+  color:#FFFFFF;
+  font-family: 'Roboto', sans-serif;
+	
+}
+
+
+
+.footer-container {
+margin-top:30px;
+  display: flex;
+  justify-content:center;
+  align-items: flex-start;
+}
+
+.footer-column {
+
+margin-top:20px;
+  width: 15%;
+}
+
+.footer-column h3 {
+
+  font-size: 16px;
+  margin-bottom: 10px;
+	
+  text-transform: uppercase;
+}
+
+.footer-column p, .footer-column ul {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+	color:#FFFFFF;
+}
+
+.footer-column ul li a:hover {
+  color:hotpink;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+.footer-column ul li i {
+  margin-right:10px;
+}
+
+
+/* social media icon table in footer */
+
+.tablefoot{
+	margin: auto;
+	border:none;
+ 	border-collapse:none;
+	padding:none;
+	font-size:14;
+
+}
+
+ .tablefoot caption {
+      font-size: 1.2em;}
+
+.tablefoot th, td {
+      padding: 10px;}
+
+.tablefoot td img{
+width: 32px;  
+height: 32px;
+transition: transform 0.3s ease-in-out;}
+
+.tablefoot td img:hover {
+      transform: scale(1.2);}
+

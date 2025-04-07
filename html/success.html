@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisement Success & Thank You</title>
+ <script>
+        // Redirect to index page after 2 seconds
+        setTimeout(function() {
+            window.location.href = '../html/index.html';
+        }, 2000); // 2 seconds delay
+    </script>   
+
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background: #28a745; /* Green background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: #fff; /* White text color for contrast */
+            margin: 10px;
+        }
+        .container h1 {
+            color: #fff; /* White text color for the header */
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+        }
+        .checkmark {
+            width: 30px; /* Adjust size as needed */
+            height: 30px; /* Adjust size as needed */
+            margin-right: 10px;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Advertisement Success</h1>
+	<img src="../images/checkmark.png" alt="Checkmark" class="checkmark">
+        <p>Thank you for choosing to advertise with us. Your advertisement has been successfully submitted. </p>
+    </div>
+
+</body>
+</html>

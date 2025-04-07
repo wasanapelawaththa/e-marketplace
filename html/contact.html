@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>SpeedWheels - Contact</title>
+    <link rel="icon" href="../images/carlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+
+    <style>
+	header {
+            background-image: url('../images/car3.jpg');
+            height: 40%;
+        }
+/*.social-links {
+    text-align: center;
+}*/
+
+	/*.social-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;*/
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #e4405f;
+}
+    </style>
+    <script>
+        function validateContactForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name == "" || email == "" || message == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            // Form is valid, show confirmation
+            alert("Message sent successfully! We'll get in touch with you shortly.");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+<nav class="navbar">
+<div class="logo">
+	<img src="../images/logo.png">
+</div>
+<div class="topnav" style="color:#333a;">
+    <a href="index.html">Home</a>
+    <a href="vehicles.html">Vehicles</a>
+    <a href="search.html">Search</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</div>
+</nav>
+
+
+<!--header-->
+<header>
+    <div style="text-align: center;">
+        <p style="font-family:calibri; font-size:20px;">---"Vehicle Buying and Selling Marketplace"---</p>
+	<h3 style="font-family:calibri; font-size:60px;">Let's talk</h3>
+    </div>
+</header>
+<h3 style="font-family:calibri; text-align:center; font-size:40px;">Send your message</h3>
+<p>Fill out the form and we will be in touch as soon as possible.</p>
+<div class="container">
+<div class="card">
+	<div class="registration-form-container">
+    		<div class="registration-form" style="font-family:calibri;text-align:left; color:#333a;">
+        		<form name="contactForm" action="../scripts/submit_form.php" method="post" onsubmit="return validateContactForm()" style="text-align:left; color:#333a;">
+				<br>
+            			<input type="text" id="name" name="name" placeholder="Name" required>
+            			<input type="email" id="email" name="email" placeholder="Email" required>
+            			<textarea id="message" name="message" rows="5" placeholder="Message" required></textarea><br> 
+            			<input style="width:25%;" type="submit" value="Send Message">
+        		</form>
+    		</div>
+	</div>
+</div>
+</div>
+
+
+
+<footer>
+
+<table class="tablefoot">
+	<caption>Follow us</caption>
+	<tr>
+	
+		<td> <a href="facebook.com" title="SPEEDWHEELS on Facebook"> <img src="../images/facebook.svg"  > </a></td>
+		<td> <a href="twitter.com" title="SPEEDWHEELS on twitter"> <img src="../images/twitter.svg"> </a> </td>
+		<td> <a href="youtube.com" title="SPEEDWHEELS on Youtube"> <img src="../images/youtube.svg"> </a> </td>
+		<td> <a href="instagram.com" title="SPEEDWHEELS on instagram"> <img src="../images/instagram.svg"> </a> </td>
+		<td> <a href="tiktok.com" title="SPEEDWHEELS on tiktok"> <img src="../images/tiktok.svg"> </a> </td>
+	
+	</tr>
+
+</table>
+
+
+<div class="footer-container">
+
+    <div class="footer-column">
+	<br>
+      <img src="../images/logo.png" width="70%">
+	<h3>SPEED WHEELS.COM</h3>
+    </div>
+    <div class="footer-column">
+     
+<table style="all: unset;">
+<caption><h3>BRANDS</h3></caption>
+<tr><td>	
+      <ul>
+        <li><a href="#">NIZZAN</a></li>
+        <li><a href="#">TOYOTA</a></li>
+        <li><a href="#">SUZUKI</a></li>
+        
+      </ul>
+</td>
+<td>
+<ul>
+	<li><a href="#">BMW</a></li>
+        <li><a href="#">HONDA</a></li>
+        <li><a href="#">MERSEDESE</a></li>
+        
+      </ul>
+
+
+</td>
+	</tr></table>
+    </div>
+    <div class="footer-column">
+      <h3>HELP & SUPPORT</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <ul>
+        <li> info@speedwheels.com</li>
+        <li>Address: 123 Main Street, Sri Lanka</li>
+        <li> + 01 234 567 88</li>
+        <li></i> + 01 234 567 89</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p style="all: unset;">&copy; 2024 Copyright: SPEED WHEELS.com</p>
+	<br><p style="all: unset;"><a href="">Terms & Policies</a></p>	
+  </div>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>SpeedWheels - Vehicles</title>
+    <link rel="icon" href="../images/carlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+
+    <style>
+        header {
+            background-image: url('../images/car5.jpg');
+            height: 40%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* Center align content */
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .car-details {
+            width: 100%; /* Full width for responsiveness */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center align cards */
+        }
+
+        .card {
+            width: 45%; /* Adjusted width for car details cards */
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: left; /* Ensure text alignment is left */
+        }
+
+        .card h3 {
+            font-family: calibri;
+            font-size: 24px; 
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-family: calibri;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .card .car-image {
+            width: 100%; /* Full width for image */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .card .car-price {
+            font-size: 22px; 
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card .additional-images {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card .additional-images img {
+            width: calc(25% - 10px); /* Adjusted width for four images with spacing */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 12px 24px; 
+            text-align: center;
+            text-decoration: none;
+            display: block; /* Change to block for centering */
+            font-size: 18px;
+            margin: 10px auto; /* Center the button horizontally */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 16px; /* Increased font size */
+            color: #666;
+        }
+
+        /* Additional styling for responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%; /* Adjusted width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!--top navigation bar-->
+<nav class="navbar">
+<div class="logo">
+	<img src="../images/logo.png">
+</div>
+<div class="topnav" style="color:#333a;">
+    <a href="index.html">Home</a>
+    <a href="vehicles.html">Vehicles</a>
+    <a href="search.html">Search</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</div>
+</nav>
+    
+    <!-- Header -->
+    <header>
+        <h3 style="font-family:calibri; font-size:64px;">Our Vehicles</h3> 
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Car Details -->
+        <div class="car-details">
+            <!-- Example card for each vehicle -->
+            <div class="card">
+                <div class="car-price" style="color:red;">Rs.3,000,000</div>
+                <h3>Honda N-WGN</h3>
+                <p>Year: 2018</p>
+                <p>Mileage: 20,000 km</p>
+                <p>Body Type: Wagon</p>
+                <p>Fuel Type: Petrol</p>
+                <p class="car-location">Location: Kandy</p> 
+                <div class="additional-images">
+                    <img src="../images/searchhond1.jpg" alt="Additional Image 1">
+                    <img src="../images/searchhond2.jpg" alt="Additional Image 2">
+                    <img src="../images/searchhond3.jpg" alt="Additional Image 3">
+                </div>
+                <a href="car1.html" class="buy-button">More Details</a>
+                <div class="card-footer">
+                    <span>Posted: 2024-06-18</span>
+                    <span style="color:green;">Verified</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="car-price" style="color:red;">Rs.2,000,000</div>
+                <h3>Nissan Sunny N17</h3>
+                <p>Year: 2010</p>
+                <p>Mileage: 140,000 km</p>
+                <p>Body Type: Sedan</p>
+                <p>Fuel Type: Petrol</p>
+                <p class="car-location">Location: Colombo</p> 
+                <div class="additional-images">
+                    <img src="../images/nissansear1.jpg" alt="Additional Image 1">
+                    <img src="../images/nissansear2.jpg" alt="Additional Image 2">
+                    <img src="../images/nissansear3.jpg" alt="Additional Image 3">
+                </div>
+                <a href="car2.html" class="buy-button">More Details</a>
+                <div class="card-footer">
+                    <span>Posted: 2024-06-18</span>
+                    <span style="color:green;">Verified</span>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+</div>
+   <footer>
+
+<table class="tablefoot">
+	<caption>Follow us</caption>
+	<tr>
+	
+		<td> <a href="facebook.com" title="SPEEDWHEELS on Facebook"> <img src="../images/facebook.svg"  > </a></td>
+		<td> <a href="twitter.com" title="SPEEDWHEELS on twitter"> <img src="../images/twitter.svg"> </a> </td>
+		<td> <a href="youtube.com" title="SPEEDWHEELS on Youtube"> <img src="../images/youtube.svg"> </a> </td>
+		<td> <a href="instagram.com" title="SPEEDWHEELS on instagram"> <img src="../images/instagram.svg"> </a> </td>
+		<td> <a href="tiktok.com" title="SPEEDWHEELS on tiktok"> <img src="../images/tiktok.svg"> </a> </td>
+	
+	</tr>
+
+</table>
+
+
+<div class="footer-container">
+
+    <div class="footer-column">
+	<br>
+      <img src="../images/logo.png" width="70%">
+	<h3>SPEED WHEELS.COM</h3>
+    </div>
+    <div class="footer-column">
+     
+<table style="all: unset;">
+<caption><h3>BRANDS</h3></caption>
+<tr><td>	
+      <ul>
+        <li><a href="#">NIZZAN</a></li>
+        <li><a href="#">TOYOTA</a></li>
+        <li><a href="#">SUZUKI</a></li>
+        
+      </ul>
+</td>
+<td>
+<ul>
+	<li><a href="#">BMW</a></li>
+        <li><a href="#">HONDA</a></li>
+        <li><a href="#">MERSEDESE</a></li>
+        
+      </ul>
+
+
+</td>
+	</tr></table>
+    </div>
+    <div class="footer-column">
+      <h3>HELP & SUPPORT</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <ul>
+        <li> info@speedwheels.com</li>
+        <li>Address: 123 Main Street, Sri Lanka</li>
+        <li> + 01 234 567 88</li>
+        <li></i> + 01 234 567 89</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p style="all: unset;">&copy; 2024 Copyright: SPEED WHEELS.com</p>
+	<br><p style="all: unset;"><a href="">Terms & Policies</a></p>	
+  </div>
+</footer>
+</body>
+</html>
+

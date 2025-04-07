@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>SpeedWheels - Vehicle Details</title>
+    <link rel="icon" href="../images/carlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            flex-direction: column;
+        }
+
+        .car-details {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .car-image {
+            width: 50%;
+            max-height: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .additional-images img {
+            width: 10%;
+            max-height: 100px;
+            margin: 0 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .additional-images img:hover {
+            opacity: 0.7; /* Added opacity on hover to indicate selection */
+        }
+
+        .car-info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .car-info h3 {
+            font-family: calibri;
+            font-size: 30px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .car-info .left, .car-info .right {
+            width: 48%;
+        }
+
+        .car-info .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .car-info .verified {
+            font-size: 18px;
+            color: green;
+            background-color: lightgreen;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .summary {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .details .column {
+            width: 30%;
+            font-size: 18px;
+        }
+
+        .about {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .seller-info {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-seller {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            margin: 10px auto;
+            border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .go-back {
+            font-family: calibri;
+            font-size: 20px;
+            color: blue;
+            text-decoration: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+    <script>
+        function showVehicleDetails(imageSrc, name, price, location, postedDate, summary, details, about, seller) {
+            document.getElementById('carImage').src = imageSrc;
+            document.getElementById('carImage').alt = name; // Set alt text to name
+            document.getElementById('carName').innerText = name;
+            document.getElementById('carPrice').innerText = price;
+            document.getElementById('carLocation').innerText = location;
+            document.getElementById('carPostedDate').innerText = postedDate;
+            document.getElementById('carSummary').innerText = summary;
+            document.getElementById('carDetails').innerHTML = details;
+            document.getElementById('carAbout').innerText = about;
+            document.getElementById('carSeller').innerText = seller;
+        }
+
+        // Function to handle click on additional images
+        function changeMainImage(imageElement) {
+            var newSrc = imageElement.src;
+            var newName = imageElement.alt;
+
+            document.getElementById('carImage').src = newSrc;
+            document.getElementById('carImage').alt = newName;
+            document.getElementById('carName').innerText = newName;
+        }
+    </script>
+</head>
+<body>
+   <!--top navigation bar-->
+<nav class="navbar">
+<div class="logo">
+	<img src="../images/logo.png">
+</div>
+<div class="topnav" style="color:#333a;">
+    <a href="index.html">Home</a>
+    <a href="vehicles.html">Vehicles</a>
+    <a href="search.html">Search</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</div>
+</nav>
+    <header>
+        <a href="javascript:history.back()" class="go-back">&larr; Go Back</a>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Vehicle Image -->
+        <img id="carImage" class="car-image" src="../images/nissansear1.jpg" alt="Nissan Sear 1">
+        
+        <!-- Additional Images -->
+        <div class="additional-images">
+            <img src="../images/nissansear1.jpg" alt="Nissan Sear 1" onclick="changeMainImage(this)">
+            <img src="../images/nissansear2.jpg" alt="Nissan Sear 2" onclick="changeMainImage(this)">
+            <img src="../images/nissansear3.jpg" alt="Nissan Sear 3" onclick="changeMainImage(this)">
+        </div>
+        
+        <!-- Car Information -->
+        <div class="car-info">
+            <h3 id="carName">Nissan Sear 1</h3>
+            <div class="left">
+                <p id="carPrice" class="price">Rs.2,500,000</p>
+                <p id="carLocation">Location: Colombo</p>
+            </div>
+            <div class="right">
+                <p id="carPostedDate">Posted: 2024-06-18</p>
+                <p id="carVerified" class="verified">Verified</p>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div id="carSummary" class="summary" style="color:blue; font-family:calibri;"><b>Summary</b></div>
+
+        <!-- Details -->
+        <div id="carDetails" class="details">
+            <div class="column">Used</div>
+            <div class="column">Mileage: 140,000 km</div>
+            <div class="column">Registration: 2010</div>
+            <div class="column">Automatic</div>
+            <div class="column">Tank: 50 Liters</div>
+            <div class="column">Body Type: Saloon</div>
+            <div class="column">Fuel: Petrol</div>
+            <div class="column">Doors: 4</div>
+            <div class="column">Color: Gray</div>
+        </div>
+
+        <!-- About Vehicle -->
+        <div id="carAbout" class="about">
+            <p>This vehicle can be seen at Dammika Motor Traders.</p>
+            <p>It has been well-maintained and serviced regularly.</p>
+        </div>
+
+        <!-- Seller Information -->
+        <div id="carSeller" class="seller-info">
+            <p><b>Seller Details</b></p>
+            <p>Seller: John Doe</p>
+            <p>Contact: 123-456-7890</p>
+            <p>Email: johndoe@example.com</p>
+        </div>
+
+        <!-- Contact Seller Button -->
+        <a href="contact.html" class="contact-seller">Contact Seller</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+<table class="tablefoot">
+	<caption>Follow us</caption>
+	<tr>
+	
+		<td> <a href="facebook.com" title="SPEEDWHEELS on Facebook"> <img src="../images/facebook.svg"  > </a></td>
+		<td> <a href="twitter.com" title="SPEEDWHEELS on twitter"> <img src="../images/twitter.svg"> </a> </td>
+		<td> <a href="youtube.com" title="SPEEDWHEELS on Youtube"> <img src="../images/youtube.svg"> </a> </td>
+		<td> <a href="instagram.com" title="SPEEDWHEELS on instagram"> <img src="../images/instagram.svg"> </a> </td>
+		<td> <a href="tiktok.com" title="SPEEDWHEELS on tiktok"> <img src="../images/tiktok.svg"> </a> </td>
+	
+	</tr>
+
+</table>
+
+
+<div class="footer-container">
+
+    <div class="footer-column">
+	<br>
+      <img src="../images/logo.png" width="70%">
+	<h3>SPEED WHEELS.COM</h3>
+    </div>
+    <div class="footer-column">
+     
+<table style="all: unset;">
+<caption><h3>BRANDS</h3></caption>
+<tr><td>	
+      <ul>
+        <li><a href="#">NIZZAN</a></li>
+        <li><a href="#">TOYOTA</a></li>
+        <li><a href="#">SUZUKI</a></li>
+        
+      </ul>
+</td>
+<td>
+<ul>
+	<li><a href="#">BMW</a></li>
+        <li><a href="#">HONDA</a></li>
+        <li><a href="#">MERSEDESE</a></li>
+        
+      </ul>
+
+
+</td>
+	</tr></table>
+    </div>
+    <div class="footer-column">
+      <h3>HELP & SUPPORT</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <ul>
+        <li> info@speedwheels.com</li>
+        <li>Address: 123 Main Street, Sri Lanka</li>
+        <li> + 01 234 567 88</li>
+        <li></i> + 01 234 567 89</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p style="all: unset;">&copy; 2024 Copyright: SPEED WHEELS.com</p>
+	<br><p style="all: unset;"><a href="">Terms & Policies</a></p>	
+  </div>
+</footer>
+</body>
+</html>
